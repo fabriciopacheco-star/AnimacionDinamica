@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animación Dinámica — Menú Principal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --card-bg: #131924;
+      --border: #1f2937;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --accent: #3b82f6;
+      --discord: #5865F2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 540px;
+    }
+
+    header {
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 9999px;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+    }
+
+    p.subtitle {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .card:hover {
+      border-color: #374151;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-info h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 0.25rem;
+    }
+
+    .card-info p {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .card-arrow {
+      font-size: 1.2rem;
+      color: var(--muted);
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .card:hover .card-arrow {
+      transform: translateX(4px);
+      color: var(--accent);
+    }
+
+    .card-discord:hover .card-arrow {
+      color: var(--discord);
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #4b5563;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <header>
+      <span class="badge">Portal Universitario</span>
+      <h1>Animación Dinámica</h1>
+      <p class="subtitle">Índice general de prácticas y repositorio de entregas.</p>
+    </header>
+
+    <main class="grid">
+      <!-- Actividad A2 -->
+      <a href="actividades/a2/index.html" class="card">
+        <div class="card-info">
+          <h2>Actividad 02</h2>
+          <p>Presentación Personal & Galería Minimalista</p>
+        </div>
+        <span class="card-arrow">→</span>
+      </a>
+
+      <!-- Discord -->
+      <a href="https://discord.com/channels/1006690355707658340/1270259162953285726/1539098022569312337" target="_blank" rel="noopener" class="card card-discord">
+        <div class="card-info">
+          <h2>Código en Discord</h2>
+          <p>Ver discusión y recursos del curso</p>
+        </div>
+        <span class="card-arrow">↗</span>
+      </a>
+    </main>
+
+    <footer>
+      <p>&copy; Animación Dinámica</p>
+    </footer>
+  </div>
+
+</body>
+</html>
