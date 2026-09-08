@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad 02 — Sobre Mí</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --card-bg: #131924;
+      --border: #1f2937;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --accent: #3b82f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1rem;
+    }
+
+    .container {
+      max-width: 680px;
+      width: 100%;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 9999px;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .item-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .item-card:hover {
+      border-color: #374151;
+      transform: translateY(-3px);
+    }
+
+    .img-container {
+      width: 100%;
+      height: 320px;
+      background-color: #000;
+      overflow: hidden;
+    }
+
+    .img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 1.5rem;
+    }
+
+    .card-number {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 0.25rem;
+      display: block;
+    }
+
+    .card-content h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content p {
+      font-size: 0.925rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .nav-footer {
+      margin-top: 3.5rem;
+      text-align: center;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text);
+      background: #1f2937;
+      text-decoration: none;
+      padding: 0.85rem 1.5rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .btn-back:hover {
+      background: #374151;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <span class="badge">Actividad 02</span>
+      <h1>Galería Personal</h1>
+      <p class="subtitle">Un vistazo a mis gustos, mi espacio y lo que disfruto día a día.</p>
+    </header>
+
+    <main class="gallery">
+
+      <!-- Foto 1: YO 1 -->
+      <article class="item-card">
+        <div class="img-container">
+          <img src="YO1.jpg" alt="Foto personal">
+        </div>
+        <div class="card-content">
+          <span class="card-number">01 / PRESENTACIÓN</span>
+          <h2>Sobre Mí</h2>
+          <p>Una breve vista personal de quién soy, enfocado en mis proyectos, el aprendizaje constante y el desarrollo creativo.</p>
+        </div>
+      </article>
+
+      <!-- Foto 2: YO 2 -->
+      <article class="item-card">
+        <div class="img-container">
+          <img src="YO2.jpg" alt="Intereses y estilo">
+        </div>
+        <div class="card-content">
+          <span class="card-number">02 / INTERESES</span>
+          <h2>Estilo y Proyectos</h2>
+          <p>Me apasiona el diseño, la producción visual y las actividades que me permiten explorar nuevas ideas y creatividad.</p>
+        </div>
+      </article>
+
+      <!-- Foto 3: YO 3 GYM -->
+      <article class="item-card">
+        <div class="img-container">
+          <img src="YO3GYM.jpg" alt="Gimnasio">
+        </div>
+        <div class="card-content">
+          <span class="card-number">03 / MI LUGAR FAVORITO</span>
+          <h2>El Gimnasio</h2>
+          <p>El gym es mi espacio principal de disciplina y enfoque. Es donde trabajo día con día en superar mis metas personales.</p>
+        </div>
+      </article>
+
+      <!-- Foto 4: HUMBE -->
+      <article class="item-card">
+        <div class="img-container">
+          <img src="HUMBE.jpg" alt="Música de Humbe">
+        </div>
+        <div class="card-content">
+          <span class="card-number">04 / MÚSICA</span>
+          <h2>Humbe</h2>
+          <p>Uno de mis artistas favoritos. Su música y producción audiovisual son una gran inspiración al momento de crear y editar.</p>
+        </div>
+      </article>
+
+      <!-- Foto 5: YO 4 NOVIA -->
+      <article class="item-card">
+        <div class="img-container">
+          <img src="YO4NOVIA.jpg" alt="Con mi novia">
+        </div>
+        <div class="card-content">
+          <span class="card-number">05 / TIEMPO JUNTOS</span>
+          <h2>Mi Novia</h2>
+          <p>Disfruto mucho compartir momentos y pasar tiempo juntos. Es una parte fundamental en mi día a día.</p>
+        </div>
+      </article>
+
+    </main>
+
+    <div class="nav-footer">
+      <a href="../../index.html" class="btn-back">
+        ← Volver al Menú Principal
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
